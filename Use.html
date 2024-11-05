@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Protected Page</title>
+    <script>
+        function checkPassword() {
+            // Set your password here
+            const correctPassword = "yourpassword";
+            const enteredPassword = document.getElementById("password").value;
+            
+            if (enteredPassword === correctPassword) {
+                document.getElementById("fileLink").style.display = "block";
+                document.getElementById("passwordForm").style.display = "none";
+            } else {
+                alert("Incorrect password. Please try again.");
+                document.getElementById("password").value = ""; // Clear the input field
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Enter Password to Access the File</h2>
+    <div id="passwordForm">
+        <input type="password" id="password" placeholder="Enter password">
+        <button onclick="checkPassword()">Submit</button>
+    </div>
+    <div id="fileLink" style="display: none;">
+        <p>Access your file here: <a href="your-file-link.pdf" target="_blank" rel="noopener noreferrer">Download File</a></p>
+    </div>
+</body>
+</html>
