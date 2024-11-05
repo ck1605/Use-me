@@ -12,7 +12,7 @@
             
             if (enteredPassword === correctPassword) {
                 document.getElementById("file").style.display = "block";
-                document.getElementById("file.html").style.display = "none";
+                document.getElementById("File.html").style.display = "none";
             } else {
                 alert("Incorrect password. Please try again.");
                 document.getElementById("password").value = ""; // Clear the input field
@@ -22,7 +22,7 @@
 </head>
 <body>
     <h2>Enter Password to Access the File</h2>
-    <div id="file.html">
+    <div id="File.html">
         <input type="password" id="password" placeholder="Enter password">
         <button onclick="checkPassword()">Submit</button>
     </div>
