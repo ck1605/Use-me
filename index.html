@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Password Protected Link</title>
+</head>
+<body>
+  <form id="passwordForm">
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    <input type="submit" value="Submit">
+  </form>
+
+  <script>
+    const form = document.getElementById('passwordForm');
+    const passwordInput = document.getElementById('password');
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      const correctPassword = '12345'; // Replace with your desired password
+
+      if (passwordInput.value === correctPassword) {
+        // Redirect to Instagram if the password is correct
+        window.location.href = 'https://www.instagram.com';
+      } else {
+        alert('Incorrect password.');
+        passwordInput.value = ''; // Clear the input for another try
+      }
+    });
+  </script>
+</body>
+</html>
