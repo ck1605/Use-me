@@ -1,12 +1,81 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Password Protected Link</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>T-Rex Game Themed Page</title>
+  <style>
+    /* General body styling */
+    body {
+      font-family: 'Press Start 2P', monospace; /* Pixelated font */
+      background-color: #f7f7f7; /* Light gray to mimic the game's background */
+      color: #000;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Form container */
+    #passwordForm {
+      display: inline-block;
+      margin-top: 100px;
+      background-color: #fff;
+      border: 2px solid #000;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 5px 5px 0 #000;
+    }
+
+    /* Input styles */
+    input[type="password"], input[type="submit"] {
+      font-family: 'Press Start 2P', monospace;
+      font-size: 14px;
+      border: 2px solid #000;
+      border-radius: 5px;
+      padding: 5px;
+      margin: 5px 0;
+      box-shadow: 3px 3px 0 #000;
+    }
+
+    input[type="submit"] {
+      background-color: #000;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #555;
+    }
+
+    /* Dinosaur styling */
+    #dino {
+      display: block;
+      margin: 50px auto 20px;
+      width: 80px;
+      height: auto;
+      animation: run 0.5s steps(4) infinite;
+    }
+
+    @keyframes run {
+      from {
+        background-position: 0;
+      }
+      to {
+        background-position: -320px;
+      }
+    }
+  </style>
+  <!-- Pixelated font -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
+  <img id="dino" src="https://i.imgur.com/8xh5dNd.png" alt="Running T-Rex">
+
   <form id="passwordForm">
-    <label for="password">Password:</label>
+    <label for="password">Enter Password:</label>
+    <br>
     <input type="password" id="password" name="password" required>
+    <br>
     <input type="submit" value="Submit">
   </form>
 
